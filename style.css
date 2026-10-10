@@ -1,0 +1,438 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Download Button Styling */
+.download-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.download-btn {
+    background-color: rgb(16, 16, 77); /* Aapke CV ki theme color */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+    background-color: #24248f;
+    transform: translateY(-2px);
+}
+
+/* PRINT / PDF SETTINGS: Jab koi download/print kare toh sirf CV aaye, button nahi */
+@media print {
+    .download-container {
+        display: none !important; /* Print karte waqt button chup jayega */
+    }
+    body {
+        background: white;
+        padding: 0;
+    }
+}
+
+
+
+body {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+img {
+    display: block;
+    /* padding: 34px; */
+    width: 193px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    max-width: 100%;
+    height: auto;
+    /* object-fit: cover; */
+    /* border: 3px solid #fff; */
+    /* height: 23px; */
+    /* text-align: center; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+ */
+}
+
+.container {
+    width: 100%;
+    line-height: 33px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-wrap: nowrap;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.contact-info,
+.skills-sec,
+.language-sec {
+    text-align: left;
+    /* Text ko left side par set karega */
+    margin-top: 20px;
+}
+
+.contact-info .text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Icon aur text ke darmiyan thora fasla */
+    text-align: left;
+}
+
+/* .skills-sec {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+} */
+
+/* .skills-sec label {
+    margin-bottom: 5px;
+} */
+
+
+.left-section,
+.right-section {
+    color: #120f3b;
+    padding: 25px;
+}
+
+.right-section {
+    width: 65%;
+    padding: 25px 35px;
+    box-sizing: border-box;
+    /* flex: 1;
+    min-width: 0;
+    width: auto; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.left-section {
+    /* height: 1000px; */
+    width: 35%;
+    background-color: #EEF3F8;
+    width: 290px;
+    /* width: 30%; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+ */
+    width: 290px;
+    flex-shrink: 0;
+    min-width: 0;
+}
+
+.heading-right,
+.same-heading {
+    font-size: 22px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgb(16, 16, 77);
+    margin: 15px;
+
+    margin-bottom: 10px;
+
+    margin-top: 25px;
+    margin-bottom: 12px;
+    padding-bottom: 4px;
+}
+
+/* ALL RIGHT SECTION CONTENT IN ONE UNIFIED SEQUENCE */
+.right-section {
+    width: 65%;
+
+    color: #120f3b;
+    /* box-sizing: border-box; */
+}
+
+/* Complete Right-Side Alignment Rule */
+.right-section h2,
+.right-section h3,
+.right-section p,
+.right-section table,
+.right-section ul {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box;
+}
+
+.myname {
+    font-size: 25px;
+    /* color: rgb(16, 16, 77); */
+    font-weight: bolder;
+    text-align: center;
+}
+
+.below-name {
+    /* color: rgb(16, 16, 77); */
+    font-size: 19px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+
+.acd-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.acd-table th,
+.acd-table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid rgb(16, 16, 77);
+}
+
+.acd-table th {
+    background-color: rgb(76, 76, 236);
+    color: #fff;
+    border: 1px solid rgb(50, 50, 139);
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.acd-table tr:nth-child(even) {
+    background-color: #f2f8fc;
+}
+
+.text {
+    font-size: 18px;
+}
+
+
+.skills-sec {
+    /* font-size: 18px; */
+    margin-top: 20px;
+    /* display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    gap: 12px; */
+
+
+}
+
+.skills-sec label {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    /* margin-right: 5px; */
+    white-space: nowrap;
+}
+
+.skills-container input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    /* margin: 0;  */
+    accent-color: #120f3b;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    /* Vertical 12px, Horizontal 20px gap */
+    margin-top: 10px;
+}
+
+.language-sec {
+
+    font-size: 18px;
+
+}
+
+/* Tools & Technologies Styling */
+.tool-sec {
+    /* margin-top: 120px; */
+}
+
+p,
+.left-section,
+.right-section li {
+    font-size: 19px;
+}
+
+.tool-list {
+
+    padding-left: 26px;
+    /* margin-top: 10px; */
+}
+
+.tool-list li {
+
+
+    margin-bottom: 5px;
+
+}
+
+
+
+.bar {
+    width: 100%;
+    height: 8px;
+    background-color: #dce3ed;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 19px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #172b4d;
+    border-radius: 10px;
+}
+
+.english {
+    width: 50%;
+
+}
+
+.urdu {
+    width: 95%;
+}
+
+.pashto {
+    width: 100%;
+}
+
+.lang-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    /* font-size: 15px; */
+
+}
+
+/* Tablet and mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+        flex: none;
+        padding: 22px;
+    }
+
+    .left-section {
+        text-align: center;
+    }
+
+    .contact-info,
+    .skills-sec,
+    .language-sec {
+        text-align: left;
+    }
+
+    .myname {
+        font-size: 24px;
+    }
+
+    .below-name {
+        font-size: 17px;
+    }
+
+    .heading-right,
+    .same-heading {
+        font-size: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .text,
+    p,
+    .left-section,
+    .right-section li {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .acd-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .acd-table th,
+    .acd-table td {
+        font-size: 14px;
+        padding: 7px;
+    }
+
+    .skills-container {
+        gap: 10px 14px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+    body {
+        padding: 6px;
+    }
+
+    .left-section,
+    .right-section {
+        padding: 16px;
+    }
+
+    .myname {
+        font-size: 21px;
+    }
+
+    .below-name {
+        font-size: 15px;
+    }
+
+    .heading-right,
+    .same-heading {
+        font-size: 18px;
+    }
+
+    .text,
+    p,
+    .left-section,
+    .right-section li {
+        font-size: 14px;
+    }
+
+    .acd-table th,
+    .acd-table td {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .skills-container {
+        gap: 8px;
+    }
+
+    .skills-sec label {
+        white-space: normal;
+    }
+}
